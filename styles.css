@@ -1,0 +1,275 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+}
+#login-bg {
+    background-image: url(https://triabagus-loginanimations.netlify.app/assets/img/login-bg.png);
+}
+#quiz-selection-bg {
+    background-image: url('https://t4.ftcdn.net/jpg/04/39/13/37/360_F_439133763_FrLdhZsd5aGC23r9ATARuKJBr8ifZjIe.jpg');
+}
+#quiz-section-bg {
+    background-image: url(https://img.freepik.com/free-vector/geometric-science-education-background-vector-gradient-blue-digital-remix_53876-125993.jpg?t=st=1723052902~exp=1723056502~hmac=afc53c31774e06a7daa944e7e8e92a2d4685c12a0097b96423a8c050a4c3fc81&w=996);
+}
+#result-section-bg {
+    background-image: url('https://st3.depositphotos.com/1388768/14617/i/600/depositphotos_146174589-stock-photo-business-technology-internet-and-network.jpg'); /* Replace with your image URL */
+}
+#app {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    z-index: 1;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+form button:hover {
+    background-color: #45a049;
+}
+.form-switch {
+    margin-top: 20px;
+}
+.form-switch a {
+    color: #007BFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+.form-switch a:hover {
+    text-decoration: underline;
+}
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+#quiz-selection h2 {
+    color: #007BFF;
+}
+.quiz-box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.quiz-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9;
+    border: 2px solid #007BFF;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.quiz-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+.quiz-box h3 {
+    margin: 0;
+    color: #007BFF;
+}
+.quiz-box p {
+    color: #555;
+    font-size: 14px;
+}
+.quiz-box button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.quiz-box button:hover {
+    background-color: #068920;
+}
+#quiz-section {
+    display: none;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 800px;
+/* Removed the background and box-shadow */
+}
+
+#timer {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+#question {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 16px;
+}
+#options button {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #007BFF;
+    color: white;
+    border: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+#options button:hover {
+    background-color: #0056b3;
+}
+#feedback {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #d9534f; /* Red color for feedback */
+}
+#score {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333;
+}
+#result-section {
+    display: none;
+}
+#result-section h2 {
+    color: #007BFF;
+}
+#result-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#result-section table, #result-section th, #result-section td {
+    border: 1px solid #ddd;
+}
+#result-section th, #result-section td {
+    padding: 12px;
+    text-align: center;
+}
+#result-section th {
+    background-color: #f2f2f2;
+}
+/* Add styles for the logout button */
+#logout-button {
+    padding: 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+#logout-button:hover {
+    background-color: #c82333;
+}
+
+
+
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .quiz-box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quiz-box {
+        max-width: 90%;
+    }
+
+    #app {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    form input, form button {
+        font-size: 14px;
+    }
+
+    #question {
+        font-size: 18px;
+    }
+
+    #options button {
+        font-size: 14px;
+    }
+
+    #timer, #feedback, #score {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    form input, form button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #question {
+        font-size: 16px;
+    }
+
+    #options button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #timer, #feedback, #score {
+        font-size: 14px;
+    }
+
+    .quiz-box {
+        padding: 15px;
+        max-width: 100%;
+    }
+}

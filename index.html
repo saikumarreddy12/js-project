@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-bg" class="background"></div>
+    <div id="quiz-selection-bg" class="background" style="display:none;"></div>
+    <div id="quiz-section-bg" class="background" style="display:none;"></div>
+    <div id="result-section-bg" class="background" style="display:none;"></div>
+    <div id="app">
+        <div id="auth-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="form-switch">
+                <p>Don't have an account? <a id="show-signup">Sign Up</a></p>
+            </div>
+        </div>
+        <div id="signup-section" style="display:none;">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="signup-username">Username</label>
+                <input type="text" id="signup-username" required>
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="form-switch">
+                <p>Already have an account? <a id="show-login">Login</a></p>
+            </div>
+        </div>
+        <div id="quiz-selection" style="display:none;">
+            <h2>Select Quiz Difficulty</h2>
+            <div class="quiz-box-container">
+                <div class="quiz-box">
+                    <h3>Easy</h3>
+                    <p>10 questions on basic HTML and CSS</p>
+                    <button onclick="startQuiz('easy')">Start Easy Quiz</button>
+                </div>
+                <div class="quiz-box">
+                    <h3>Medium</h3>
+                    <p>20 questions on intermediate HTML, CSS, and JavaScript</p>
+                    <button onclick="startQuiz('medium')">Start Medium Quiz</button>
+                </div>
+                <div class="quiz-box">
+                    <h3>Hard</h3>
+                    <p>30 questions on advanced HTML, CSS, and JavaScript</p>
+                    <button onclick="startQuiz('hard')">Start Hard Quiz</button>
+                </div>
+            </div>
+        </div>
+        <div id="quiz-section" style="display:none;">
+            <div id="timer"></div>
+            <div id="question"></div>
+            <div id="options"></div>
+            <div id="feedback"></div>
+            <div id="score"></div>
+        </div>
+        <div id="result-section" style="display:none;">
+            <h2>Quiz Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Easy Quiz Score</th>
+                        <th>Medium Quiz Score</th>
+                        <th>Hard Quiz Score</th>
+                        <th>Average Score (%)</th>
+                    </tr>
+                </thead>
+                <tbody id="result-tbody">
+                    <!-- Results will be inserted here -->
+                </tbody>
+            </table>
+            <button id="logout-button" onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
