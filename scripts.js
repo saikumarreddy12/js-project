@@ -5,7 +5,7 @@ const users = JSON.parse(localStorage.getItem('users')) || {}; // Stores registe
             easy: {
                 questions: [
                 { question: "What does HTML stand for in html?", options: ["HyperText Markup Language", "HighText Markup Language", "HyperText Markdown Language"], answer: "HyperText Markup Language" },
-                { question: "What does CSS stand for?", options: ["Cascading Style Sheets", "Cascading Simple Sheets", "Computer Style Sheets"], answer: "Cascading Style Sheets" },
+                { question: "What does CSS stand at as for?", options: ["Cascading Style Sheets", "Cascading Simple Sheets", "Computer Style Sheets"], answer: "Cascading Style Sheets" },
                 { question: "How do you insert a comment in CSS?", options: ["// comment", "<!-- comment -->", "/* comment */"], answer: "/* comment */" },
                 { question: "What HTML tag is used to define an internal style sheet?", options: ["<style>", "<css>", "<script>"], answer: "<style>" },
                 { question: "What is the correct HTML element for inserting a line break?", options: ["<break>", "<lb>", "<br>"], answer: "<br>" },
